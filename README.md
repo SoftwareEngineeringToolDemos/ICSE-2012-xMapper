@@ -7,7 +7,7 @@ This repository _is not_ the original repository for this tool. Here are some li
 * [The Official Dissertation](http://y.web.umkc.edu/yzheng/doc/dissertation-zheng.pdf)
 * [A Video of the Tool](https://www.youtube.com/watch?v=ArpMIpaHeZU)
 
-In this repository, for xMapper you will find:
+In this repository, for xMapper, you will find:
 * :x: Source code (not available)
 * :x: Executable tool (not available)
 
