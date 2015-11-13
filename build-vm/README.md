@@ -12,8 +12,8 @@ This build-vm folder contains following things:
 
 # Note
 * Please wait until "vagrant up" command has completed successfully before using the virtual machine.
-* If the VM prompts for login details or password details when the VM system goes to sleep, please use the following:
-Username : __vagrant__
+* If the VM prompts for login details or password details when the VM system goes to sleep, please use the following:</br>
+Username : __vagrant__ </br>
 Password : __vagrant__ 
 
 # Acknowledgments
