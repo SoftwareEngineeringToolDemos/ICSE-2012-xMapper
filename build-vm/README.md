@@ -22,4 +22,4 @@ Password : __vagrant__
 # References
 * [Vagrant Documentation](https://docs.vagrantup.com/v2/getting-started/)
 * [Boxcutter Ubuntu 64-bit Virtual Box](https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1404-desktop)
-* [Java 6 Installation Tutorial](http://askubuntu.com/questions/190582/installing-java-automatically-with-silent-option)
+* [Java Installation Tutorial](http://askubuntu.com/questions/190582/installing-java-automatically-with-silent-option)
