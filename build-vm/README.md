@@ -1,4 +1,4 @@
-This build-vm folder contains following things:
+This build-vm folder contains the following things:
 - __README.md__ Contains the steps to create and start VM using vagrant, details about VM, acknowledgements and references.
 - __Vagrantfile__  This script will create an Ubuntu (64-bit) virtual machine with Java 6 as the default Java version installed in it.
 
