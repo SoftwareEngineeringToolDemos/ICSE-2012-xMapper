@@ -16,11 +16,11 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y oracle-java6-set-default
     
     # Install Adobe Flash Player plugin to view youtube videos
-	sudo apt-get install -y flashplugin-installer 
+    sudo apt-get install -y flashplugin-installer 
     
     # Copy Eclipse and create shortcut
     cp /vagrant/eclipse.tar.gz /home/vagrant/Desktop/eclipse.tar.gz
-	cd /home/vagrant/Desktop
+    cd /home/vagrant/Desktop
     sudo tar -zxvf eclipse.tar.gz
     sudo chown -R vagrant /home/vagrant/Desktop/eclipse
     ln -s /home/vagrant/Desktop/eclipse/eclipse "/home/vagrant/Desktop/Eclipse"
@@ -30,12 +30,12 @@ Vagrant.configure(2) do |config|
     cd /home/vagrant/workspace
     wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=0B5CDoggIha9BX2ltTUJqdkhMeDA' -O workspace.tar.gz
     sudo tar -zxvf workspace.tar.gz
-	sudo chown -R vagrant /home/vagrant/workspace/
+    sudo chown -R vagrant /home/vagrant/workspace/
     
     # Add Eclipse as startup application
-	sudo mkdir "/home/vagrant/.config/autostart"
+    sudo mkdir "/home/vagrant/.config/autostart"
     sudo chown -R vagrant "/home/vagrant/.config/autostart/"
-	wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/eclipse.desktop -O "/home/vagrant/.config/autostart/eclipse.desktop"
+    wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/eclipse.desktop -O "/home/vagrant/.config/autostart/eclipse.desktop"
     sudo chown -R vagrant "/home/vagrant/.config/autostart/eclipse.desktop"
     
     # Copy readme, installation, licenses, acknowledgments, how-to video links to vm desktop
@@ -46,7 +46,7 @@ Vagrant.configure(2) do |config|
     wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/Author%20xMapper_%20An%20Architecture-Implementation%20Mapping%20Tool%20-%20YouTube.desktop -O "Author xMapper: An Architecture-Implementation Mapping Tool - YouTube.desktop"
     wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/VM%20xMapper%20An%20Architecture-Implementation%20Mapping%20Tool%20Demo%20-%20YouTube.desktop -O " VM xMapper An Architecture-Implementation Mapping Tool Demo - YouTube.desktop"    
     sudo chown -R vagrant "/home/vagrant/Desktop"
-	sudo chmod -R a+rwx "/home/vagrant/Desktop"
+    sudo chmod -R a+rwx "/home/vagrant/Desktop"
     
     # Remove the downloaded tar files
     sudo rm -f /home/vagrant/Desktop/eclipse.tar.gz
@@ -63,7 +63,7 @@ Vagrant.configure(2) do |config|
     sudo rm -rf ~/.local/share/Trash/*
     
     # Reboot the VM
-	sudo reboot
+    sudo reboot
     
    SHELL
 end
