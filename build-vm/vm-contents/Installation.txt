@@ -1,0 +1,39 @@
+Installing Oracle Java 1.6
+
+1. Open terminal run the below commands
+
+2. sudo add-apt-repository ppa:webupd8team/java
+
+3. sudo apt-get update
+
+4. sudo apt-get install oracle-java6-set-default
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Installing Eclipse Kepler
+
+1. Download Elipse Standard 4.3 Kepler Linux 32-bit version from the below link.
+   http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/R/eclipse-standard-kepler-R-linux-gtk.tar.gz
+
+2. Extract the downloaded tar file.
+
+3. Go to the extract folder and double click on eclipse application to run it.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Installing xMapper (Present as a plugin in ArchStudio 4)
+
+1. Open the Eclipse platform.
+
+2. Go to Help > Install New Software, and then enter the following URL in the dialog panel that pops up.
+   https://svn.ics.uci.edu/isr-projects/archstudio4/branches/umkc/updatesite/
+
+3. Click the Add button, and select all the software components which are displayed after clicking the Add button. Click Next.
+
+4. Go through all the panels that follow. If a security warning appears, hit OK. When the license page is displayed, select I accept the terms of the license agreement.
+
+5. Once the installation is complete, you will be asked to restart Eclipse. After Eclipse is restarted, you have successfully installed ArchStudio 4 which contains the xMapper plugin.
+
+Thanks to the author Dr.Yongjie Zheng for providing the steps to install xMapper.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
