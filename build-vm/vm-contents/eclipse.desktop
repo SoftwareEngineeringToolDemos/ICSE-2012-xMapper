@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/varun/Desktop/eclipse/eclipse
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Eclipse
+Name=Eclipse
+Comment[en_US]=xMapper
+Comment=xMapper
