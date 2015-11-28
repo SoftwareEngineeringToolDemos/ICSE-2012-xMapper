@@ -1,74 +1,69 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
 Vagrant.configure(2) do |config|
-  # The most common configuration options are documented and commented below.
-  # For a complete reference, please see the online documentation at
-  # https://docs.vagrantup.com.
 
-  # Every Vagrant development environment requires a box. You can search for
-  # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "boxcutter/ubuntu1404-desktop"
-
-  # Disable automatic box update checking. If you disable this, then
-  # boxes will only be checked for updates when the user runs
-  # `vagrant box outdated`. This is not recommended.
-  # config.vm.box_check_update = false
-
-  # Create a forwarded port mapping which allows access to a specific port
-  # within the machine from a port on the host machine. In the example below,
-  # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
-
-  # Create a private network, which allows host-only access to the machine
-  # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
-
-  # Create a public network, which generally matched to bridged network.
-  # Bridged networks make the machine appear as another physical device on
-  # your network.
-  # config.vm.network "public_network"
-
-  # Share an additional folder to the guest VM. The first argument is
-  # the path on the host to the actual folder. The second argument is
-  # the path on the guest to mount the folder. And the optional third
-  # argument is a set of non-required options.
-  # config.vm.synced_folder "../data", "/vagrant_data"
-
-  # Provider-specific configuration so you can fine-tune various
-  # backing providers for Vagrant. These expose provider-specific options.
-  # Example for VirtualBox:
-  #
+   config.vm.box = "nritholtz/ubuntu-14.04.1"
+  
    config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-      vb.gui = true
-      vb.name = "xMapper"
-  #
-  #   # Customize the amount of memory on the VM:
-      vb.memory = "2048"
+     vb.gui = true
+     vb.name = "Perquimans-vaettap-xMapper"
+     vb.memory = "2098"
    end
-  #
-  # View the documentation for the provider you are using for more
-  # information on available options.
 
-  # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
-  # such as FTP and Heroku are also available. See the documentation at
-  # https://docs.vagrantup.com/v2/push/atlas.html for more information.
-  # config.push.define "atlas" do |push|
-  #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
-  # end
-
-  # Enable provisioning with a shell script. Additional provisioners such as
-  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
-  # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
+    # Install Oracle Java 6
     sudo add-apt-repository -y ppa:webupd8team/java
     sudo apt-get update
     echo "oracle-java6-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
     sudo apt-get install -y oracle-java6-set-default
+    
+    # Install Adobe Flash Player plugin to view youtube videos
+	sudo apt-get install -y flashplugin-installer 
+    
+    # Copy Eclipse and create shortcut
+    cp /vagrant/eclipse.tar.gz /home/vagrant/Desktop/eclipse.tar.gz
+	cd /home/vagrant/Desktop
+    sudo tar -zxvf eclipse.tar.gz
+    sudo chown -R vagrant /home/vagrant/Desktop/eclipse
+    ln -s /home/vagrant/Desktop/eclipse/eclipse "/home/vagrant/Desktop/Eclipse"
+    
+    #Copy workspace
+    sudo mkdir /home/vagrant/workspace
+    cd /home/vagrant/workspace
+    wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=0B5CDoggIha9BX2ltTUJqdkhMeDA' -O workspace.tar.gz
+    sudo tar -zxvf workspace.tar.gz
+	sudo chown -R vagrant /home/vagrant/workspace/
+    
+    # Add Eclipse as startup application
+	sudo mkdir "/home/vagrant/.config/autostart"
+    sudo chown -R vagrant "/home/vagrant/.config/autostart/"
+	wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/eclipse.desktop -O "/home/vagrant/.config/autostart/eclipse.desktop"
+    sudo chown -R vagrant "/home/vagrant/.config/autostart/eclipse.desktop"
+    
+    # Copy readme, installation, licenses, acknowledgments, how-to video links to vm desktop
+    cd /home/vagrant/Desktop
+    wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/Installation.txt -O Installation.txt
+    wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/License.txt -O License.txt
+    wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/Readme.txt -O Readme.txt
+    wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/Author%20xMapper_%20An%20Architecture-Implementation%20Mapping%20Tool%20-%20YouTube.desktop -O "Author xMapper: An Architecture-Implementation Mapping Tool - YouTube.desktop"
+    wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/VM%20xMapper%20An%20Architecture-Implementation%20Mapping%20Tool%20Demo%20-%20YouTube.desktop -O " VM xMapper An Architecture-Implementation Mapping Tool Demo - YouTube.desktop"    
+    sudo chown -R vagrant "/home/vagrant/Desktop"
+	sudo chmod -R a+rwx "/home/vagrant/Desktop"
+    
+    # Remove the downloaded tar files
+    sudo rm -f /home/vagrant/Desktop/eclipse.tar.gz
+    sudo rm -f /home/vagrant/workspace/workspace.tar.gz
+    
+    # Disable screen lock, screensaver and update manager. Remove deja-dup
+    wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/screenlock_disable.sh -O /home/vagrant/Downloads/screenlock_disable.sh
+    sudo chmod a+rwx "/home/vagrant/Downloads/screenlock_disable.sh"
+    wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/screenlock_disable.desktop -O "/home/vagrant/.config/autostart/screenlock_disable.desktop"
+    wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/update-notifier.desktop -O "/home/vagrant/.config/autostart/update-notifier.desktop"
+    sudo apt-get remove -y deja-dup
+    
+    # Empty Trash
+    sudo rm -rf ~/.local/share/Trash/*
+    
+    # Reboot the VM
+	sudo reboot
+    
    SHELL
 end
