@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/home/varun/Desktop/eclipse/eclipse
+Exec=/home/vagrant/Desktop/eclipse/eclipse
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
