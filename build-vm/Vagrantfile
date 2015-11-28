@@ -38,7 +38,7 @@ Vagrant.configure(2) do |config|
     wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/eclipse.desktop -O "/home/vagrant/.config/autostart/eclipse.desktop"
     sudo chown -R vagrant "/home/vagrant/.config/autostart/eclipse.desktop"
     
-    # Copy readme, installation, licenses, acknowledgments, how-to video links to vm desktop
+    # Copy readme, installation, licenses, how-to video links to vm desktop
     cd /home/vagrant/Desktop
     wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/Installation.txt -O Installation.txt
     wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/License.txt -O License.txt
