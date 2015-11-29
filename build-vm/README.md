@@ -7,9 +7,10 @@ This build-vm folder contains the following things:
 2. Download and Install [VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads) appropriate to the VirtualBox version installed in the previous step.
 3. Download and Install [Vagrant](https://www.vagrantup.com/downloads.html) appropriate to your host machine OS.
 4. Copy the file [Vagrantfile](https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/blob/master/build-vm/Vagrantfile) in this folder to your host machine OS.
-5. Open command prompt (on Windows) or terminal (on Linux) and change the current directory to where the "Vagrantfile" was copied to.
-6. Run the command "vagrant up".
-7. Vagrant file will start executing and will create an Ubuntu (32-bit) virtual machine with the xMapper tool installed in eclipse along with a sample project.
+5. Please contact the authors for the executable version of the xMapper tool and copy it to the same folder as the Vagrantfile downloaded in the previous step.
+6. Open command prompt (on Windows) or terminal (on Linux) and change the current directory to where the "Vagrantfile" was copied to.
+7. Run the command "vagrant up".
+8. Vagrant file will start executing and will create an Ubuntu (32-bit) virtual machine with the xMapper tool installed in eclipse along with a sample project.
 
 # Note
 * Please wait until "vagrant up" command has completed successfully before using the virtual machine.
