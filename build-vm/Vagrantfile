@@ -6,6 +6,9 @@ Vagrant.configure(2) do |config|
      vb.gui = true
      vb.name = "Perquimans-vaettap-xMapper"
      vb.memory = "2098"
+     # Disable USB
+     vb.customize ["modifyvm", :id, "--usb", "off"]
+     vb.customize ["modifyvm", :id, "--usbehci", "off"]
    end
 
    config.vm.provision "shell", inline: <<-SHELL
