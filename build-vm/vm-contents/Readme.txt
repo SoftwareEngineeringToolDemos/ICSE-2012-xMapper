@@ -6,6 +6,4 @@
 
 4. Now we can proceed as per the "VM xMapper An Architecture-Implementation Mapping Tool Demo - YouTube" link shared on the VM desktop to test the xMapper tool.
 
-5. For Authors video please double click the "Author xMapper: An Architecture-Implementation Mapping Tool - YouTube" link shared on the VM desktop.
-
-6. To open the architecture file arch.xml in ArchEdit, right click the arch.xml in the navigator view and select Open With -> ArchEdit.
+5. To open the architecture file arch.xml in ArchEdit, right click the arch.xml in the navigator view and select Open With -> ArchEdit.
