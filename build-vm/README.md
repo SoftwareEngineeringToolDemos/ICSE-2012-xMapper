@@ -23,7 +23,7 @@ Password : __vagrant__
 
 # References
 * [Vagrant Documentation](https://docs.vagrantup.com/v2/getting-started/)
-* [Boxcutter Ubuntu 64-bit Virtual Box](https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1404-desktop)
+* [nritholtz Ubuntu 32-bit Virtual Box](https://atlas.hashicorp.com/nritholtz/boxes/ubuntu-14.04.1)
 * [Java Installation Tutorial](http://askubuntu.com/questions/190582/installing-java-automatically-with-silent-option)
 * [Disable Screen Lock](http://askubuntu.com/questions/647976/ubuntu-14-04-disable-password-lock-when-waking-from-screensaver-for-all-users)
 * [Turn Off Automatic Updates](http://muzso.hu/2011/01/05/how-to-turn-off-automatic-updates-in-ubuntu)
