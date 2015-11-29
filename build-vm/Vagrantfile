@@ -46,7 +46,6 @@ Vagrant.configure(2) do |config|
     wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/Installation.txt -O Installation.txt
     wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/License.txt -O License.txt
     wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/Readme.txt -O Readme.txt
-    wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/Author%20xMapper_%20An%20Architecture-Implementation%20Mapping%20Tool%20-%20YouTube.desktop -O "Author xMapper: An Architecture-Implementation Mapping Tool - YouTube.desktop"
     wget https://github.com/SoftwareEngineeringToolDemos/ICSE-2012-xMapper/raw/master/build-vm/vm-contents/VM%20xMapper%20An%20Architecture-Implementation%20Mapping%20Tool%20Demo%20-%20YouTube.desktop -O " VM xMapper An Architecture-Implementation Mapping Tool Demo - YouTube.desktop"    
     sudo chown -R vagrant "/home/vagrant/Desktop"
     sudo chmod -R a+rwx "/home/vagrant/Desktop"
