@@ -10,6 +10,7 @@ This repository _is not_ the original repository for this tool. Here are some li
 In this repository, for xMapper, you will find:
 * :x: Source code (not available)
 * :x: Executable tool (not available)
+* :x: Virtual machine containing tool (not available)
 
 xMapper is not available to redistribute or provide the source code. Please contact [Yongjie Zheng](http://y.web.umkc.edu/yzheng/) and [Richard N. Taylor](https://www.ics.uci.edu/~taylor/) to receive an executable version of the tool.
 
