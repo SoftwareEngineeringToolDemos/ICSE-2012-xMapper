@@ -4,7 +4,7 @@ An Architecture-Implementation Mapping Tool
 This repository contains information related to the tool xMapper presented in the International Conference on Software Engineering, 2012. The tool was originally presented in [this paper](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6227064).
 
 This repository _is not_ the original repository for this tool. Here are some links to the original project:
-* [The Official Dissertation](http://y.web.umkc.edu/yzheng/doc/dissertation-zheng.pdf)
+* [Dissertation](http://y.web.umkc.edu/yzheng/doc/dissertation-zheng.pdf)
 * [A Video of the Tool](https://www.youtube.com/watch?v=ArpMIpaHeZU)
 
 In this repository, for xMapper, you will find:
